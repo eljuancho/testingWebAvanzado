@@ -42,3 +42,10 @@ body {
 .divInfo{
   background-color: #fcf8e3;
 }
+
+.big-modal{
+  width: 60% !important
+}
+.medium-modal{
+  width: 40% !important
+}

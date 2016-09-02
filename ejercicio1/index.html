@@ -27,9 +27,7 @@
 
   <body>
 
-    <div class="container">
-
-     
+    <div class="container">     
       <form class="form-signin">
         <h2 class="form-signin-heading">Please sign in</h2>
         <label for="inputEmail" class="sr-only">Email address</label>
@@ -44,14 +42,17 @@
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
       </form>
 
-      <button type="button" class="btn btn-info btn-large pull-right" data-toggle="modal" data-target="#myModal">Pistas?</button>
+      <div class="pull-right">
+        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#hintsModal">Pistas?</button>      
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#solutionModal">Solución</button>
+      </div>
 
-      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="purchaseLabel" aria-hidden="true">
+      <div class="modal fade" id="hintsModal" tabindex="-1" role="dialog" aria-labelledby="purchaseLabel" aria-hidden="true">
           <div class="modal-dialog">
               <div class="modal-content">
                   <div class="modal-header">
                       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                      <h4 class="modal-title" id="purchaseLabel">Pistas</h4>
+                      <h4 class="modal-title" id="pistasLabel">Pistas</h4>
                   </div>
                   <div class="modal-body">
                       Miraste como está armado el form?
@@ -62,7 +63,25 @@
               </div>
           </div>
       </div>
-
+      
+      <div class="modal fade" id="solutionModal" tabindex="-1" role="dialog" aria-labelledby="purchaseLabel" aria-hidden="true">
+          <div class="modal-dialog medium-modal">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                      <h4 class="modal-title" id="rtaLabel">Solución</h4>
+                  </div>
+                  <div class="modal-body" style="text-align:center">
+                    <button class="btn btn-danger pull-center" id="confirm">¡Estoy seguro de que quiero ver la solución!</button>
+                    <div  id="solucion" style="text-align:left">
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+              </div>
+          </div>
+      </div>
 
     </div> <!-- /container -->
 
