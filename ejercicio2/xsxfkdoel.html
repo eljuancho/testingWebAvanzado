@@ -1,0 +1,9 @@
+<p>Revisando el código fuente del form, podemos ver que si bien el botón de "Sign in" es de tipo submit, el form en sí no tiene un action. Esto genera que se llame a sí mismo, y la página se termine recargando.<p>
+<pre>
+&lt;form class="form-signin"&gt;
+	.
+	.
+	.
+	&lt;button class="btn btn-lg btn-primary btn-block" type="submit"&gt;Sign in&lt;/button&gt;
+&lt;/form&gt;
+</pre>

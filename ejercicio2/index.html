@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Ejercicio 1</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../libs/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="signin.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">     
+      <form class="form-signin">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address: user@tests.com" required autofocus> 
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password: Password" required>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+
+      <div class="pull-right">
+        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#hintsModal">Pistas?</button>      
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#solutionModal">Solución</button>
+        <button type="button" class="btn btn-success" id="btnSiguiente">Siguiente Ejercicio --></button>
+      </div>
+
+
+      <div class="modal fade" id="hintsModal" tabindex="-1" role="dialog" aria-labelledby="purchaseLabel" aria-hidden="true">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                      <h4 class="modal-title" id="pistasLabel">Pistas</h4>
+                  </div>
+                  <div class="modal-body">
+                      Miraste como está armado el form?
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+      <div class="modal fade" id="solutionModal" tabindex="-1" role="dialog" aria-labelledby="purchaseLabel" aria-hidden="true">
+          <div class="modal-dialog medium-modal">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                      <h4 class="modal-title" id="rtaLabel">Solución</h4>
+                  </div>
+                  <div class="modal-body" style="text-align:center">
+                    <button class="btn btn-danger pull-center" id="btnConfirm">¡Estoy seguro de que quiero ver la solución!</button>
+                    <div  id="solucion" style="text-align:left">
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+    </div> <!-- /container -->
+
+    <script type="text/javascript" src="../libs/jquery-3.1.0.js"></script>
+    <script type="text/javascript" src="../libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="ejercicio1.js"></script>
+  </body>
+</html>
