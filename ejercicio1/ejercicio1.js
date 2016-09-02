@@ -2,16 +2,21 @@ $(document).ready(function(){
 
 	$('#solutionModal').on('show.bs.modal', function (event) {
 		jQuery.get('xsxfkdoel.html', function(data) {
-			$("#confirm").show();
+			$("#btnConfirm").show();
 			$("#solucion").hide();
 			$("#solucion").html(data);
 		});
 	});
 
-	$("#confirm").on("click", function(){
+	$("#btnConfirm").on("click", function(){
 		$("#solucion").show();
-		$("#confirm").hide();
+		$("#btnConfirm").hide();
 	});
+
+	$("#btnSiguiente").on("click", function(){
+		window.location.href="../ejercicio2"
+	});
+	
 })
 
 
